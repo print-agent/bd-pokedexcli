@@ -1,0 +1,96 @@
+# Go-specific patterns
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+*.prof
+coverage.txt
+coverage.html
+
+# Build output directories
+/bin/
+/dist/
+/build/
+
+# Go workspace file
+go.work
+
+# Dependency directories
+/vendor/
+/Godeps/
+
+# IDE and editor files
+# VS Code
+.vscode/
+*.code-workspace
+
+# GoLand and other JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+*.iws
+.idea_modules/
+
+# vim
+*.swp
+*.swo
+*~
+
+# emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# OS-specific files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# Environment and configuration files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+config.yaml
+config.yml
+config.json
+!example.config.yaml
+!example.config.json
+!example.env
+
+# Application logs
+*.log
+logs/
+log/
+
+# Local development artifacts
+/tmp/
+/temp/
+/data/
+
