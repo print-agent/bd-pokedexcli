@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# bd-pokedexcli
-=======
 # BDxPokedex CLI
 
 A command-line interface tool for accessing and exploring Pokemon data. Built as a portfolio project in Go.
@@ -43,5 +40,3 @@ Currently, the application displays a version message. Additional features will 
 ## License
 
 [MIT License](LICENSE)
-
->>>>>>> ff76e7d (Initial project skeleton for bd-pokedexcli)
