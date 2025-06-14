@@ -21,8 +21,8 @@ func TestCleanInput(t *testing.T) {
 			[]string{"You", "Have", "Within", "You", "Right", "Now", "Everything", "You", "Need", "To", "Deal", "With", "The", "World"},
 		},
 		{
-			"Nothing is impossible, the word itself says 'I'm impossible'!",
-			[]string{"Nothing", "Is", "Impossible", "The", "Word", "Itself", "Says", "I'm", "Impossible"},
+			"Nothing is impossible, the word itself says 'Im impossible'!",
+			[]string{"Nothing", "Is", "Impossible", "The", "Word", "Itself", "Says", "Im", "Impossible"},
 		},
 		{
 			"The quick brown fox jumps over the lazy dog",
@@ -77,19 +77,26 @@ func TestCleanInput(t *testing.T) {
 	for _, c := range tests {
 		actual := cleanInput(c.input)
 
-		fmt.Println(len(actual))
-		fmt.Println(len(c.expected))
+		// debug length counting
+		// fmt.Println(len(actual))
+		// fmt.Println(len(c.expected))
 
 		if len(actual) != len(c.expected) {
 			t.Errorf("Fail, length dont match")
 		}
 
-		// for i, word := range actual {
-		// 	expectedWord := tCase.expected
-		//
-		// 	if word != expectedWord[i] {
-		// 		t.Errorf("Fail, words dont match")
-		// 	}
-		// }
+		for i, word := range actual {
+			expectedWord := c.expected[i]
+
+			// debug what is actual and what is expected
+			fmt.Printf("the actual word in question is %v\n", word)
+			fmt.Printf("the expected word in question is %v\n", expectedWord)
+			fmt.Println("=====================================")
+
+			if word != expectedWord {
+				t.Errorf("Fail, words dont match")
+				fmt.Println("=====================================")
+			}
+		}
 	}
 }
